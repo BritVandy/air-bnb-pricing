@@ -23,8 +23,6 @@ async def homepage(request: Request):
 async def homepage(request: Request):
     return templates.TemplateResponse('homepage.html', context={'request': request})
 
-app.include_router(homepage.router, tags=[''])
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=['*'],
